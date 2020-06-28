@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/into/into",
+    "pages/index/index",
+    "pages/homepage/homepage",
+    "pages/add/add",
+    "pages/detail/detail"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "仿朋友圈",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

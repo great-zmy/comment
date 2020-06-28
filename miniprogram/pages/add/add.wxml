@@ -1,0 +1,16 @@
+<!--miniprogram/pages/add/add.wxml-->
+<form class="con" bindsubmit="upload">
+	<textarea placeholder="请输入你想发布的文字" value="{{content}}" bindblur="bindTextAreaBlur"></textarea>
+	<view>
+		<view class="img" wx:if="{{filePath}}">
+			<image src="{{filePath}}" mode="widthFix"></image>
+			<image class="icon" src="/images/guanbi.png" bindtap="close"></image>
+		</view>
+		<view wx:else class="choose" bindtap="choose">
+      <image src="/images/chooseImage.png"></image>
+		</view>
+	</view>
+  <view wx:if="{{location}}" class="card-location">所处位置：{{location}}</view>
+	<button bindtap="location">选择位置</button>
+	<button type="primary" formType="submit">发布</button>
+</form>

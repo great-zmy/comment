@@ -1,0 +1,80 @@
+/**app.wxss**/
+/* 背景 */
+.img{
+  width: 100%;
+  height: 400rpx;
+}
+.avatar{
+  position: relative;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: -40rpx;
+  right: 40rpx;
+}
+.title image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 20rpx;
+  border-radius: 20rpx;
+}
+.title text{
+  color: white;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+/* 卡片 */
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+}
+/* 卡片内容 */
+.card{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid gray;
+}
+/* 左侧头像 */
+.card-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+}
+/* 右侧内容 */
+.card-right{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+/* 姓名 */
+.nickName{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: blue;
+}
+/* 文本内容 */
+.content{
+  font-size: 35rpx;
+  margin: 10rpx 0;
+}
+/* 图片 */
+.card-img{
+  width: 600rpx;
+}
+.card-img image{
+  width: 80%;
+}
+/* 位置 */
+.card-location{
+  color: blue;
+  font-size: 30rpx;
+}
+/* 日期 */
+.card-date{
+  margin: 20rpx 0;
+}

@@ -1,0 +1,41 @@
+/* miniprogram/pages/add/add.wxss */
+.con{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+textarea{
+  border:1rpx solid black;
+  width: 100%;
+}
+.img{
+  position: relative;
+}
+/* 上传的图片样式 */
+image{
+  width: 50%;
+  margin: 20rpx 0;
+}
+/* 关闭图片按钮 */
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top:0;
+  right: 50%;
+}
+.choose{
+  border: 1rpx solid black;
+  width: 50%;
+  height: 350rpx;
+  margin: 20rpx 0;
+}
+.choose image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 125rpx;
+  margin-top: 125rpx;
+}
+button{
+  margin: 20rpx 0;
+}

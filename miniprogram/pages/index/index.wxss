@@ -1,0 +1,7 @@
+/**index.wxss**/
+.btn{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+

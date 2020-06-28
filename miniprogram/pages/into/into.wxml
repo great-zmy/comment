@@ -1,0 +1,8 @@
+<!--miniprogram/pages/into/into.wxml-->
+<view class="into-container">
+	
+		<button wx:if="{{nickName}}" type="primary" bindtap="goToIndex">进入首页</button>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="getMyInfo" type="warn" plain>获取用户信息</button>
+	
+	
+</view>

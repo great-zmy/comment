@@ -1,0 +1,26 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<!-- 卡片布局 -->
+<view class="container">
+	<!-- 卡片开始 -->
+	<view class="card" wx:for="{{commentList}}" wx:key="comment{{index}}">
+		<!-- 卡片左侧图片 -->
+		<view>
+			<image class="card-avatar" src="{{item.avatarUrl}}"></image>
+		</view>
+		<!-- 卡片右侧内容 -->
+		<view class="card-right">
+			<!-- 姓名 -->
+			<text class="nickName">{{item.nickName}}</text>
+			<!-- 文本内容 -->
+			<text class="content">{{item.content}}</text>
+			<!-- 图片内容 -->
+			<view class="card-img">
+				<image src="{{item.photoUrl}}" mode="widthFix"  bindtap="preview" data-url="{{item.photoUrl}}"></image>
+			</view>
+			<text class="card-location">{{item.location}}</text>
+			<text class="card-date">{{item.addDate}}</text>
+		</view>
+	</view>
+	<!-- 卡片结束 -->
+  
+</view>

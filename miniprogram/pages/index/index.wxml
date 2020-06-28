@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+<!-- 上方个人朋友圈信息 -->
+<view class="avatar">
+	<image class="img" src="/images/001.jpg"></image>
+	<button type="primary" size="mini" class="btn" bindtap="goToAdd" open-type="getUserInfo" bindgetuserinfo="getUserInfo">发布朋友圈</button>
+	<view class="title">
+		<text>{{nickName}}</text>
+		<image src="{{avatarUrl}}"></image>
+	</view>
+</view>
+<!-- 隔开头像的位置，该处不放朋友圈卡片 -->
+<view style="height:40rpx;"></view>
+<!-- 卡片布局 -->
+<view class="container">
+	<!-- 卡片开始 -->
+	<view class="card" wx:for='{{commentList}}' wx:key='comment{{index}}'>
+		<!-- 卡片左侧图片 -->
+		<view>
+			<navigator url="../homepage/homepage?id={{item._openid}}">
+				<image class="card-avatar" src="{{item.avatarUrl}}" bindtap="goToHome"></image>
+			</navigator>
+		</view>
+		<!-- 卡片右侧内容 -->
+		<view class="card-right">
+			<!-- 姓名 -->
+			<text class="nickName">{{item.nickName}}</text>
+			<!-- 文本内容 -->
+			<text class="content">{{item.content}}</text>
+			<!-- 图片内容 -->
+			<view class="card-img">
+				<image src="{{item.photoUrl}}" mode="widthFix" bindtap="preview" data-url="{{item.photoUrl}}"></image>
+			</view>
+			<text class="card-location">{{item.location}}</text>
+			<text class="card-date">{{item.addDate}}</text>
+		</view>
+	</view>
+	<!-- 卡片结束 -->
+
+</view>

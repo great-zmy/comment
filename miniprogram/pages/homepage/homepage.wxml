@@ -1,0 +1,23 @@
+<!--miniprogram/pages/homepage/homepage.wxml-->
+<!-- 上方个人朋友圈信息 -->
+<view class="avatar">
+	<image class="img" src="/images/001.jpg"></image>
+	<view class="title">
+		<text>{{commentList[0].nickName}}</text>
+		<image src="{{commentList[0].avatarUrl}}"></image>
+	</view>
+</view>
+<!-- 占位符 -->
+<view style="height:100rpx"></view>
+<view class="container">
+	<!-- 卡片 -->
+	<view class="self-card" wx:for="{{commentList}}" wx:key="comment{{index}}" bindtap="goToDetail" data-id="{{item._id}}">
+		<!-- 日期 -->
+		<text class="self-date">{{item.addDate}}</text>
+    <!-- 内容 -->
+    <view class="self-content">
+      <image src="{{item.photoUrl}}"></image>
+      <text>{{item.content}}</text>
+    </view>
+	</view>
+</view>
